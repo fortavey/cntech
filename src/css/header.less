@@ -1,0 +1,146 @@
+header.site-header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .top-line {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    nav {
+      flex-grow: 1;
+    }
+    ul {
+      margin: 0;
+      padding: 33px 0;
+      list-style: none;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      li {
+        color: #f8f8f8;
+        font-size: 13px;
+        font-weight: 500;
+        font-family: "Montserrat Medium";
+        transition: all .2s;
+        &:hover a {
+          color: #40b1ea;
+          font-family: "Montserrat - Bold";
+          font-weight: 700;
+          text-decoration: underline;
+        }
+      }
+    }
+    .top-search {
+      margin: 0 46px;
+      position: relative;
+      height: 100%;
+      > img {
+        cursor: pointer;
+        display: none;
+        &.button-active {
+          display: block;
+        }
+      }
+      form {
+        max-width: 0;
+        overflow: hidden;
+        position: absolute;
+        top: -17px;
+        right: 25px;
+        display: flex;
+        align-items: center;
+        height: 58px;
+        box-shadow: 0 10px 15px rgba(78, 175, 80, 0.3);
+        border-radius: 29px;
+        background-color: #fff;
+        box-sizing: border-box;
+        transition: max-width 0.5s;
+        input {
+          width: 880px;
+          border: none;
+          outline: none;
+        }
+        .btn {
+          width: 184px;
+          padding: 0;
+        }
+        &.search-active {
+          padding: 0  4px 0 20px;
+          max-width: 900px;
+        }
+      }
+    }
+  }
+  .middle-line {
+    .logo {
+
+    }
+    .support {
+      span {
+        img {}
+      }
+    }
+  }
+
+  // Main Page
+  h1.main-h1 {}
+  .main-btn {
+    .f-line {}
+    .main-btn__top {
+      span {
+        &:first-child {}
+        &:last-child {}
+      }
+    }
+    .main-btn__text {}
+    .main-btn__bottom {
+      span {
+        &:first-child {}
+        &:last-child {}
+      }
+    }
+  }
+  .header-else {
+    position: relative;
+    .header-else-container {
+
+    }
+    .header-else-item {
+      .f-plus {
+        span {
+          &:first-child {}
+          &:last-child {}
+        }
+      }
+      .header-else-item__text {
+        strong {}
+      }
+    }
+    img.fake-mouse {
+      position: absolute;
+    }
+  }
+
+  //Else page
+  .breadcrumbs {
+    a {}
+    span {}
+  }
+  .bottom-line {
+
+  }
+  .page-info {
+    &__title {}
+    &__desc {}
+  }
+  .page-icon-desc {
+    &-item {
+      img {}
+      div {}
+      strong {}
+    }
+  }
+}
