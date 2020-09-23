@@ -1,0 +1,52 @@
+.main-catalog {
+  margin-bottom: 84px;
+}
+.main-categorys {
+  margin-top: 40px;
+  .flex();
+  background-image: url(./img/bottom_angle.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  @media screen and (max-width: 1000px) {
+    background-image: none;
+  }
+}
+.main-categry-item {
+  background-size: cover;
+  min-height: 300px;
+  .width(12000px, 12, 4, 5px);
+  .width(1000px, 12, 6, 12px);
+  margin: 2.5px;
+  @media screen and (max-width: 1000px) {
+    margin: 6px;
+  }
+  @media screen and (max-width: 700px) {
+    min-height: 200px;
+  }
+  @media screen and (max-width: 700px) {
+    min-height: 152px;
+  }
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+  }
+  &__title {
+    height: 140px;
+    background-image: linear-gradient(to top, rgba(31, 58, 91, 0) 0%, #212121 100%);
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 35px;
+    padding: 45px 0 0 45px;
+    box-sizing: border-box;
+    @media screen and (max-width: 700px) {
+      height: 94px;
+      padding: 24px 0 0 24px;
+      font-size: 15px;
+      line-height: 17.62px;
+    }
+  }
+}

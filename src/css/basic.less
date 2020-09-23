@@ -19,8 +19,15 @@ body {
 .wrapper {
     .wrapper();
 }
-h1 {
-    font-size: 50px;
+h2.main-h2 {
+    color: #263238;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 45px;
+    margin: 0;
+    @media screen and (max-width: 500px) {
+        font-size: 24px;
+    }
 }
 .btn {
     display: inline-flex;
@@ -38,4 +45,42 @@ h1 {
     font-weight: 700;
     line-height: 50px;
     cursor: pointer;
+}
+main.site-main {
+    h3 {
+        color: #131313;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 25px;
+        margin: 30px 0 50px;
+        @media screen and (max-width: 500px) {
+            font-size: 18px;
+            margin: 30px 0 20px;
+        }
+    }
+    p {
+        margin: 12px 0;
+        strong {
+            font-family: "Montserrat - Bold";
+            font-weight: 700;
+        }
+    }
+    ul, ol {
+        margin: 0;
+    }
+    .col-50 {
+        width: 50%;
+        padding-right: 100px;
+        box-sizing: border-box;
+        @media screen and (max-width: 1000px) {
+            padding-right: 30px;
+        }
+        @media screen and (max-width: 800px) {
+            width: 100%;
+        }
+    }
+    .col-100 {
+        width: 100%;
+    }
 }

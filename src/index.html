@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="site-header" style="background-image: url(./img/bg.png);">
-        <div class="wrapper">
-            <div class="top-line">
+    <header class="site-header" data-src="./img/bg.png" data-src-mobile="./img/main-mobile.png">
+        <div class="top-line">
+            <div class="wrapper">
                 <nav>
                     <ul>
                         <li><a href="#">О нас</a></li>
@@ -23,6 +23,18 @@
                         <li><a href="#">Наши контакты</a></li>
                     </ul>
                 </nav>
+                <div class="mobile-blue">
+                    <div class="mobile-blue__text">
+                        Высококачественное и недорогое оборудование для вашего бизнеса из Китая
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><div class="social-icons__item"><img src="./img/skype.svg" alt="icon"></div></a>
+                        <a href="#"><div class="social-icons__item"><img src="./img/whatsapp.svg" alt="icon"></div></a>
+                        <a href="#"><div class="social-icons__item"><img src="./img/viber.svg" alt="icon"></div></a>
+                        <a href="#"><div class="social-icons__item"><img src="./img/webchat.svg" alt="icon"></div></a>
+                        <a href="#"><div class="social-icons__item"><img src="./img/telegram.svg" alt="icon"></div></a>
+                    </div>
+                </div>
                 <div class="top-search">
                     <img src="./img/search.svg" alt="icon" class="button-active search-open">
                     <img src="./img/search-close.svg" alt="icon" class="search-close">
@@ -33,9 +45,11 @@
                 </div>
                 <div class="btn">Отправить запрос</div>
             </div>
+        </div>
+        <div class="wrapper">
             <div class="middle-line">
-                <div class="logo"></div>
-                <div class="support">Для связи с нами: <span><img src="./img/support.png" alt="support"></span></div>
+                <div class="logo"><a href="/"><img src="./img/logo.png" alt="logo"></a></div>
+                <div class="support"><div class="open-menu"><span></span><span></span><span></span></div> <div class="hide-text"> Для связи с нами:</div> <span class="click-support"><span><img src="./img/support.png" alt="support"></span></span></div>
             </div>
             <h1 class="main-h1">Высококачественное и недорогое оборудование для <span>вашего бизнеса из Китая</span></h1>
             <div class="main-btn">
@@ -52,12 +66,21 @@
                         <div class="header-else-item__text">
                             <strong>Гарантируем честную цену</strong>, быструю доставку и качество
                         </div>
+                    </div>
+                    <div class="header-else-item">
+                        <div class="f-plus"><span></span><span></span></div>
                         <div class="header-else-item__text">
                             Обладаем большим опытом сотрудничества с заводами оборудования в <strong>Китае и на Тайване</strong>
                         </div>
+                    </div>
+                    <div class="header-else-item">
+                        <div class="f-plus"><span></span><span></span></div>
                         <div class="header-else-item__text">
                             Мы инженеры и <strong>говорим по русски</strong> и <strong>всегда поможем</strong> с выбором
                         </div>
+                    </div>
+                    <div class="header-else-item">
+                        <div class="f-plus"><span></span><span></span></div>
                         <div class="header-else-item__text">
                             Ведем сделку <strong>от начала и до конца</strong>: до выгрузки у вас на складе после таможенного оформления
                         </div>
@@ -67,6 +90,203 @@
             <img class="fake-mouse" src="../img/fake-mouse.png" alt="mouse">
         </div>
     </header>
+    <main class="site-main">
+        <div class="main-text-after-header">
+            <div class="wrapper">
+                <p>
+                    <strong>Оборудование</strong> — это общий термин, включающий в себя станки различного назначения, погрузчики, технику для промышленности, полиграфии, медицины, оснащение для пищевого производства, упаковки товаров и еще множество вариантов разного направления. Для каждого вида промышленности необходимо определенное оборудование, но стоит отметить, что в Китае есть города и провинции, где сосредоточено производство оснащения различного назначения.
+                </p>
+                <p>
+                    Например, в восточных регионах Китая изготавливается <strong>более 50% оборудования на экспорт</strong>.
+                </p>
+                <p>
+                    Наша компания сотрудничает со многими китайскими производителями. Мы можем обратиться на любое предприятие за необходимой техникой, вам остается только оставить заявку. Вместе с оборудованием вы получите необходимые спецификации от производителя.
+                </p>
+                <p>
+                    Китайские фабрики применяют смешанные методики производства. Они пользуются собственным опытом, а также наработками коллег из США и стран Западной Европы. Такой подход к изготовлению оборудования позволяет извлекать максимум выгоды за счет постоянной модернизации производственных линий и оптимизации производственных затрат. Современные китайские заводы, в частности, стремящиеся к выходу на международный рынок, соответствуют международным требованиям безопасности, а качество производимой продукции не отличается от европейского
+                </p>
+            </div>
+        </div>
+        <section class="main-catalog">
+            <div class="wrapper">
+                <h2 class="main-h2">Каталог оборудования</h2>
+                <div class="main-categorys">
+                    <div class="main-categry-item" style="background-image: url(./img/wood.jpg)">
+                        <a href="#">
+                            <div class="main-categry-item__title">Деревообработка</div>
+                        </a>
+                    </div>
+                    <div class="main-categry-item" style="background-image: url(./img/stone.jpg)">
+                        <a href="#">
+                            <div class="main-categry-item__title">Обработка камня</div>
+                        </a>
+                    </div>
+                    <div class="main-categry-item" style="background-image: url(./img/paper.jpg)">
+                        <a href="#">
+                            <div class="main-categry-item__title">Производство бумажных изделий </div>
+                        </a>
+                    </div>
+                    <div class="main-categry-item" style="background-image: url(./img/metalla.jpg)">
+                        <a href="#">
+                            <div class="main-categry-item__title">Металлобработка</div>
+                        </a>
+                    </div>
+                    <div class="main-categry-item" style="background-image: url(./img/lazer.jpg)">
+                        <a href="#">
+                            <div class="main-categry-item__title">Лазерное оборудование</div>
+                        </a>
+                    </div>
+                    <div class="main-categry-item" style="background-image: url(./img/forming.jpg)">
+                        <a href="#">
+                            <div class="main-categry-item__title">Упаковочные станки</div>
+                        </a>
+                    </div>
+                    <div class="main-categry-item" style="background-image: url(./img/glass.jpg)">
+                        <a href="#">
+                            <div class="main-categry-item__title">Обработка стекла</div>
+                        </a>
+                    </div>
+                    <div class="main-categry-item" style="background-image: url(./img/plastic.jpg)">
+                        <a href="#">
+                            <div class="main-categry-item__title">Литье пластмасс</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-how">
+            <div class="wrapper">
+                <h2 class="main-h2">Как приобрести оборудование в Китае</h2>
+                <div class="main-how-list">
+                    <div class="main-how-item">
+                        <div class="main-how-item__number">1</div>
+                        <div class="main-how-item__text">
+                            <p>
+                                <strong>Оформите заявку</strong> на нашем сайте. Укажите полный перечень необходимого оборудования, его технические характеристики и аналогичные модели
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-how-item">
+                        <div class="main-how-item__number">2</div>
+                        <div class="main-how-item__text">
+                            <p>
+                                <strong>Сотрудники нашей компании</strong> исследуют рынок и найдут несколько предложений от различных фабрик. Далее специалисты проведут анализ производителей и выберут лучшего в соотношении цены-качества
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-how-item">
+                        <div class="main-how-item__number">3</div>
+                        <div class="main-how-item__text">
+                            <p>
+                                <strong>Далее будет проведен аудит</strong> выбранного поставщика, проведены переговоры насчет стоимости оборудования и начнется подготовка документов для международной сделки. Затем следует подписание договора и наблюдение за его выполнением
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-how-item">
+                        <div class="main-how-item__number">4</div>
+                        <div class="main-how-item__text">
+                            <p>
+                                <strong>Подготовка выезда вашего сотрудника</strong> для проведения пусконаладочных работ, а также контроля качества или выезд специалиста нашей компании. Будут проведены испытания и исправления возможных дефектов. Завершение подготовки международных документов
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-how-item">
+                        <div class="main-how-item__number">5</div>
+                        <div class="main-how-item__text">
+                            <p>
+                                <strong>Доставка и таможенное оформление.</strong> Доставка осуществляется под ваш контракт либо под контракт нашего импортера. Мы давно отработали метод заказа и доставки оборудования из Китая, поэтому вы можете не участвовать в этом процессе, полностью доверив его нашим специалистам
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-control">
+            <div class="wrapper">
+                <div class="main-control-container">
+                    <div class="main-control__text">
+                        <h2 class="main-h2">Контроль качества оборудования и его тестирование</h2>
+                        <p>
+                            Перед транспортировкой оборудования в страну назначения очень важно убедиться в его исправности и соответствии вашим требованиям.
+                        </p>
+                        <p>
+                            <strong>Тестирование необходимо</strong> для того, чтобы удостовериться в работоспособности всех узлов оборудования и наличии необходимого функционала. Кроме того, проверка оснащения позволит выявить скрытые дефекты, которые в дальнейшем могут привести к серьезным проблемам.
+                        </p>
+                        <p>
+                            <strong>Незначительные дефекты можно бесплатно и быстро исправить непосредственно на заводе</strong>, но если оборудование поступит на территорию РФ, то его ремонт обойдется значительно дороже.
+                        </p>
+                    </div>
+                    <div class="main-control__img"><img src="./img/control.png" alt="control"></div>
+                </div>
+            </div>
+        </section>
+        <section class="main-delivery">
+            <div class="wrapper">
+                <h2 class="main-h2">Контроль качества оборудования и его тестирование</h2>
+                <div class="outer-p">
+                    <p>
+                        Наша компания доставляет грузы в Россию любым удобным вам способом:<br>
+                        <strong>по воздуху, железной дороге или морю</strong>
+                    </p>
+                </div>
+            </div>
+            <img src="./img/delivery.png" alt="delivery" class="main-delivery__img">
+            <div class="wrapper">
+                <div class="delivery-transport">
+                    <div class="col-50">
+                        <h3>Авиационный транспорт</h3>
+                        <p>
+                            Чаще всего с помощью грузовых самолетов мы доставляем малогабаритные и нетяжелые объекты. Цена транспортировки зависит от веса груза, пунктов вылета и прибытия. Стоимость варьируется от <strong>1 до 15 долларов за килограмм груза</strong>
+                        </p>
+                    </div>
+                    <div class="col-50">
+                        <h3>Железная дорога</h3>
+                        <p>
+                            Железнодорожный транспорт считается оптимальным решением для транспортировки оборудования из <strong>Китая</strong> по цене-скорости. Наши специалисты организуют доставку груза в <strong>Россию</strong> в кратчайшие сроки. Мы загрузим, отправим вам фото и сопроводим груз до пункта таможенного оформления.
+                        </p>
+                    </div>
+                    <div class="col-100">
+                        <h3>Морской транспорт</h3>
+                        <p>
+                            В большинстве случаев доставка по морю и автомобилем комбинируется. То есть сначала груз прибывает в морской порт, например, Владивосток, а оттуда уже транспортируется посредством грузовика. Также дополнительно может быть использован железнодорожный транспорт. Перегрузка из контейнера не осуществляется, на нем сохраняется китайская пломба. Это необходимо для того, чтобы случайно не повредить оборудование во время разгрузочно-погрузочных работ. <strong>Наша компания также может предложить комбинированную доставку</strong>.
+                        </p>
+                        <p>
+                            Исходя из требуемых сроков доставки, мы выберем оптимальный вариант, а после того, как оборудование поступит в пункт таможенного оформления,
+                            наш сотрудник осуществит таможенную очистку груза. После этого оснащение отправится в конечный пункт, а по его прибытию вы сможете установить оборудование и начать эксплуатацию.
+                        </p>
+                        <p>
+                            Большой опыт наших сотрудников позволяет организовать доставку максимально быстро и по самым выгодным ценам. Мы поможем правильно оформить импортно-экспортные документы, контракты и упаковочные листы, кроме того, наши специалисты проконтролируют процесс отгрузки и доставки оборудования до конечного пункта на территории <strong>России и стран СНГ</strong>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="main-banner">
+            <div class="wrapper">
+                <div class="main-banner-container">
+                    <div class="banner-left">
+                        Подберем качественное
+                        оборудование по низкой
+                        цене из Китая
+                    </div>
+                    <div class="banner-right">
+                        <img src="./img/arrow.png" alt="arrow" class="banner-arrow">
+                        <div class="banner-right__text">
+                            Наши специалисты помогут выбрать идеальный вариант
+                        </div>
+                        <div class="btn">Отправить запрос</div>
+                        <img src="./img/img_man.png" alt="manager" class="man-manager">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="main-tech">
+            <div class="wrapper">
+
+            </div>
+        </section>
+    </main>
     <script type='text/javascript' src='js/app.js'></script>
 </body>
 </html>

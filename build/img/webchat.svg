@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Capa_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 512 512"
+   style="enable-background:new 0 0 512 512;"
+   xml:space="preserve"
+   sodipodi:docname="webchat.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"><metadata
+   id="metadata49"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs47" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1631"
+   inkscape:window-height="995"
+   id="namedview45"
+   showgrid="false"
+   inkscape:zoom="1.65625"
+   inkscape:cx="157.28302"
+   inkscape:cy="256"
+   inkscape:window-x="49"
+   inkscape:window-y="27"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Capa_1" />
+<g
+   id="g6"
+   style="fill:#ffffff">
+	<g
+   id="g4"
+   style="fill:#ffffff">
+		<path
+   d="M192,32C85.952,32,0,103.648,0,192c0,50.944,28.736,96.128,73.312,125.376L48,368l68.96-29.536    c14.784,5.248,30.144,9.568,46.56,11.584c-2.24-9.76-3.52-19.776-3.52-30.048c0-88.224,86.112-160,192-160    c9.696,0,19.168,0.8,28.512,1.952C363.616,87.968,285.696,32,192,32z M128,152c-13.248,0-24-10.752-24-24s10.752-24,24-24    s24,10.752,24,24S141.248,152,128,152z M256,152c-13.248,0-24-10.752-24-24s10.752-24,24-24s24,10.752,24,24S269.248,152,256,152z    "
+   id="path2"
+   style="fill:#ffffff" />
+	</g>
+</g>
+<g
+   id="g12"
+   style="fill:#ffffff">
+	<g
+   id="g10"
+   style="fill:#ffffff">
+		<path
+   d="M512,320c0-70.688-71.648-128-160-128s-160,57.312-160,128s71.648,128,160,128c14.528,0,28.352-2.048,41.76-4.96L480,480    l-29.824-59.616C487.552,396.96,512,360.928,512,320z M304,312c-13.248,0-24-10.752-24-24s10.752-24,24-24s24,10.752,24,24    S317.248,312,304,312z M400,312c-13.248,0-24-10.752-24-24s10.752-24,24-24s24,10.752,24,24S413.248,312,400,312z"
+   id="path8"
+   style="fill:#ffffff" />
+	</g>
+</g>
+<g
+   id="g14">
+</g>
+<g
+   id="g16">
+</g>
+<g
+   id="g18">
+</g>
+<g
+   id="g20">
+</g>
+<g
+   id="g22">
+</g>
+<g
+   id="g24">
+</g>
+<g
+   id="g26">
+</g>
+<g
+   id="g28">
+</g>
+<g
+   id="g30">
+</g>
+<g
+   id="g32">
+</g>
+<g
+   id="g34">
+</g>
+<g
+   id="g36">
+</g>
+<g
+   id="g38">
+</g>
+<g
+   id="g40">
+</g>
+<g
+   id="g42">
+</g>
+</svg>

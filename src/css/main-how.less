@@ -1,0 +1,47 @@
+.main-how {
+  &-list {
+    margin-top: 50px;
+    margin-bottom: 80px;
+    @media screen and (max-width: 500px) {
+      margin-top: 23px;
+      margin-bottom: 41px;
+    }
+  }
+  &-item {
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    background-color: #eff4f8;
+    margin-bottom: 8px;
+    &__number {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      color: #1f97f3;
+      font-family: Montserrat;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 30px;
+      background-color: #fff;
+      margin-right: 25px;
+      @media screen and (max-width: 500px) {
+        margin-right: 14px;
+      }
+    }
+    &__text {
+      p {
+        color: #212121;
+        line-height: 25px;
+        font-family: "Montserrat";
+      }
+      strong {
+        font-family: "Montserrat - Bold";
+        font-weight: 700;
+      }
+    }
+  }
+}
