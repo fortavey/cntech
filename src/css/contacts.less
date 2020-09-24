@@ -1,0 +1,106 @@
+.contacts-container {
+  display: flex;
+  padding-bottom: 80px;
+  @media screen and (max-width: 950px) {
+    flex-wrap: wrap;
+  }
+  h2.main-h2 {
+    margin-bottom: 67px;
+  }
+  .cont-page-form {
+    flex-grow: 1;
+    > div {
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        input {
+          width: 100%;
+          box-sizing: border-box;
+          height: 42px;
+          margin-bottom: 15px;
+          border: none;
+          border-bottom: 2px solid #e1e1e1;
+          &[type=submit] {
+            border: none;
+            width: 220px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            box-shadow: 0 10px 15px rgba(78, 175, 80, 0.3);
+            border-radius: 25px;
+            background-color: #4caf50;
+            background-image: linear-gradient(to right, #4caf50 0%, #8bc34a 100%);
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            @media screen and (max-width: 950px) {
+              margin-bottom: 60px;
+            }
+          }
+        }
+        .input-short {
+          width: calc(50% - 15px);
+        }
+        .input-long {
+          width: 100%;
+        }
+        .textarea {
+          display: block;
+          width: 100%;
+          margin-bottom: 72px;
+        }
+        textarea {
+          width: 100%;
+          box-sizing: border-box;
+          display: block;
+          border: none;
+          border-bottom: 2px solid #e1e1e1;
+        }
+      }
+    }
+  }
+  .cont-page-contacts {
+    margin-left: 34px;
+    width: 425px;
+    flex-shrink: 0;
+    @media screen and (max-width: 450px) {
+      width: 100%;
+    }
+    .cont-item {
+      display: flex;
+      align-items: center;
+      padding-left: 32px;
+      position: relative;
+      margin-bottom: 15px;
+      img {
+        position: absolute;
+        left: 0;
+        top: 5px;
+      }
+      strong {
+        font-family: "Montserrat - Bold";
+        font-weight: 700;
+        line-height: 35px;
+      }
+    }
+    .social-icons {
+      justify-content: flex-start;
+      margin-top: 48px;
+      &__item {
+        background-color: #c1c1c1;
+        &:hover {
+          background-color: #1f97f3;
+        }
+      }
+    }
+  }
+}
+.wrapper.contact-map {
+  @media screen and (max-width: 1260px) {
+    padding: 0;
+    width: 100%;
+  }
+}

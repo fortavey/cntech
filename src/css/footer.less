@@ -1,0 +1,196 @@
+.footer-form {
+  background-color: #1f97f3;
+  padding-bottom: 37px;
+  .wrapper {
+    display: flex;
+  }
+  .footer-form-desc {
+    width: 370px;
+    flex-shrink: 0;
+    margin-right: 35px;
+    &__text {
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 35px;
+      margin-top: 44px;
+      margin-bottom: 16px;
+    }
+    &__info {
+      display: flex;
+      align-items: center;
+      img {
+
+      }
+      .call-you {
+        background: rgb(31,151,243);
+        background: linear-gradient(115deg, rgba(31,151,243,1) 0%, rgba(31,151,243,1) 4%, rgba(31,151,243,1) 15%, rgba(31,132,213,1) 15%, rgba(31,132,213,1) 85%, rgba(31,151,243,1) 85%, rgba(31,151,243,1) 100%);
+        padding: 0 50px 0 55px;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        width: 286px;
+      }
+    }
+  }
+  .footer-form-form {
+    flex-grow: 1;
+    form {
+      margin-top: 40px;
+      .flex();
+      justify-content: space-between;
+      input:not([type=submit]):not([type=file]):not([type=checkbox]) {
+        width: 100%;
+        box-sizing: border-box;
+        border: none;
+        height: 50px;
+        margin-bottom: 10px;
+        padding-left: 26px;
+        box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.15);
+        border: 1px solid #cad6df;
+        background-color: #fafafa;
+      }
+      input[type=submit] {
+        border: none;
+        width: 220px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        box-shadow: 0 10px 15px rgba(78, 175, 80, 0.3);
+        border-radius: 25px;
+        background-color: #4caf50;
+        background-image: linear-gradient(to right, #4caf50 0%, #8bc34a 100%);
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        margin-right: 36px;
+      }
+      .input-short33 {
+        .width(12000px, 12, 4, 6px);
+      }
+      .input-long {
+        width: 100%;
+      }
+      .form-bottom-line {
+        display: flex;
+        align-items: center;
+        .file-block {
+          color: #ffffff;
+          font-size: 15px;
+          font-weight: 700;
+          line-height: 25px;
+          text-decoration: underline;
+          margin-right: 20px;
+          cursor: pointer;
+          input[type=file] {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+footer.site-footer {
+  background-color: #334155;
+  padding-top: 47px;
+  color: #ffffff;
+  a {
+    color: inherit;
+  }
+  .footer-container {
+    .flex();
+  }
+  .footer-item {
+    .width(12000px, 12, 3, 20px);
+    .width(900px, 12, 6, 20px);
+    .width(450px, 12, 12, 20px);
+    margin: 10px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 25px;
+    a {
+      text-decoration: none;
+      transition: all 0.2s;
+      &:hover {
+        color: #40b1ea;
+        font-family: "Montserrat - Bold";
+        font-weight: 700;
+        text-decoration: underline;
+      }
+    }
+    .footer-desc {
+      margin: 35px 0;
+    }
+    &__title {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 25px;
+      margin-bottom: 32px;
+    }
+    &-contacts {
+
+    }
+    &-keyses {
+      line-height: 20px;
+      .width(500px, 12, 12, 20px);
+      > div:not(.footer-item__title) div {
+        margin-bottom: 17px;
+      }
+    }
+    &-info {
+      .width(500px, 12, 12, 20px);
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+    }
+  }
+  .copyright {
+    background-color: #263238;
+    color: rgba(255,255,255,0.4);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-top: 62px;
+    @media screen and (max-width: 500px) {
+      margin-top: 39px;
+    }
+    @media screen and (max-width: 700px) {
+      padding: 10px 0;
+    }
+    .wrapper {
+      min-height: 60px;
+      .flex();
+      justify-content: flex-end;
+      align-items: center;
+      @media screen and (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      div {
+        margin-right: 50px;
+        @media screen and (max-width: 700px) {
+          margin-right: 0;
+        }
+        &:first-child {
+          margin-right: auto;
+          @media screen and (max-width: 700px) {
+            margin-right: 0;
+          }
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

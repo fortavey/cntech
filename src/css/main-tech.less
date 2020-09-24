@@ -1,5 +1,37 @@
 .main-tech {
-  background-image: url(./img/bg_4.png);
   min-height: 540px;
   background-size: cover;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  box-sizing: border-box;
+  @media screen and (max-width: 500px) {
+    padding-top: 30px;
+    padding-bottom: 47px;
+  }
+  h2.main-h2 {
+    color: white;
+    margin-bottom: 35px;
+    padding: 0 25px;
+  }
+  .main-tech-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main-tech-item {
+    .width(12000px, 12, 4, 50px);
+    .width(1000px, 12, 12, 50px);
+    margin: 25px;
+    img {
+      margin-bottom: 35px;
+    }
+    div {
+      p {
+        margin: 0;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+      }
+    }
+  }
 }
