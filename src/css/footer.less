@@ -3,11 +3,19 @@
   padding-bottom: 37px;
   .wrapper {
     display: flex;
+    @media screen and (max-width:1000px) {
+      flex-wrap: wrap;
+    }
   }
   .footer-form-desc {
     width: 370px;
     flex-shrink: 0;
     margin-right: 35px;
+    @media screen and (max-width:1000px) {
+      width: 100%;
+      max-width: 370px;
+      margin: auto;
+    }
     &__text {
       color: #ffffff;
       font-size: 24px;
@@ -70,16 +78,43 @@
         font-weight: 700;
         cursor: pointer;
         margin-right: 36px;
+        text-decoration: none !important;
+        @media screen and (max-width:1100px) {
+          order: 2;
+          width: 100%;
+          max-width: 424px;
+          display: flex;
+          margin: auto;
+        }
       }
       .input-short33 {
         .width(12000px, 12, 4, 6px);
+        .width(500px, 12, 12, 0px);
       }
       .input-long {
         width: 100%;
+        textarea {
+          box-sizing: border-box;
+          padding: 18px 5px 5px 25px;
+          font-size: 15px;
+          @media screen and (max-width: 500px) {
+            padding-top: 21px;
+            height: 169px;
+          }
+        }
       }
       .form-bottom-line {
         display: flex;
         align-items: center;
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        text-decoration: underline;
+        @media screen and (max-width:1100px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
         .file-block {
           color: #ffffff;
           font-size: 15px;
@@ -88,8 +123,48 @@
           text-decoration: underline;
           margin-right: 20px;
           cursor: pointer;
+          display: flex;
+          align-items: center;
+          white-space: nowrap;
+          position: relative;
+          @media screen and (max-width:1100px) {
+            margin-bottom: 18px;
+          }
+          .file-name {
+            position: absolute;
+            top: 100%;
+            opacity: 0.5;
+            white-space: normal;
+            z-index: 100;
+            @media screen and (max-width:1100px) {
+              left: 30px;
+              top: calc(100% - 5px);
+            }
+          }
           input[type=file] {
             display: none;
+          }
+          &::before {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 18px;
+            background-image: url(./img/clip.png);
+            background-size: contain;
+            margin-right: 11px;
+          }
+        }
+        label {
+          display: flex;
+          align-items: center;
+          @media screen and (max-width:1100px) {
+            margin-bottom: 24px;
+          }
+          input[type=checkbox] {
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            flex-shrink: 0;
           }
         }
       }
