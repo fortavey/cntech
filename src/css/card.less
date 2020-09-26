@@ -1,0 +1,204 @@
+.product-top {
+  display: flex;
+  padding-bottom: 50px;
+  border-bottom: 2px solid #e9f1f6;
+  margin-bottom: 40px;
+  @media screen and (max-width: 1100px) {
+    flex-wrap: wrap;
+  }
+  &__gallery {
+    width: 630px;
+    height: 450px;
+    flex-shrink: 0;
+
+    @media screen and (max-width: 1100px) {
+      .margin(auto);
+      margin-bottom: 80px;
+    }
+    @media screen and (max-width: 650px) {
+      width: 100%;
+    }
+  }
+  &__info {
+    flex-grow: 1;
+    padding-left: 50px;
+    box-sizing: border-box;
+    @media screen and (max-width: 1100px) {
+      padding-left: 0;
+    }
+    &-desc {
+      color: #000000;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 27px;
+      > div {
+        margin-bottom: 10px;
+      }
+      span {
+        color: #818181;
+
+      }
+      .f-cost {
+        font-family: "Montserrat - Bold";
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 35px;
+        span {
+          font-size: 15px;
+          font-weight: 400;
+          font-family: "Montserrat";
+        }
+      }
+    }
+    .btn {
+      margin-top: 46px;
+      box-sizing: border-box;
+      @media screen and (max-width: 500px) {
+        width: 100%;
+        display: flex;
+        max-width: 421px;
+        .margin(auto);
+      }
+    }
+  }
+}
+.desctop-title {
+  h1 {
+    color: #2e2e2e;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    @media screen and (max-width: 500px) {
+      font-size: 17px;
+      line-height: 30px;
+    }
+  }
+  .articul {
+    color: #8e8e8e;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+.tab-parent {
+  margin-bottom: 30px;
+  .tab-name {
+    color: #2e2e2e;
+    font-family: "Montserrat - Bold";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    cursor: pointer;
+    img {
+      transform: rotate(180deg);
+    }
+  }
+  &.tab-opened {
+    .tab-name {
+      img {
+        transform: rotate(0deg);
+      }
+    }
+    .tab-block {
+      max-height: 1000px;
+      transition-timing-function: cubic-bezier(1,.01,.83,.67);
+    }
+  }
+}
+.tab-block {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+  transition-timing-function: cubic-bezier(.01,1.14,.71,.96);
+}
+.product-information {}
+.product-character {
+
+}
+.tab-block {
+  .flex();
+  > div {
+    .width(12000px, 12, 4, 0px);
+    .width(1000px, 12, 12, 0px);
+    div {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 30px;
+      &.char-title {
+        color: #1f97f3;
+        font-family: "Montserrat - Bold";
+        font-weight: 700;
+      }
+    }
+  }
+}
+.populap-product {
+  .flex();
+  margin-bottom: 40px;
+  justify-content: space-between;
+  .sub-popular {
+    color: #838383;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    width: 100%;
+    text-align: center;
+    margin-top: 90px;
+  }
+  h2 {
+    color: #2e2e2e;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 50px;
+    margin: 27px 0 55px;
+    width: 100%;
+    text-align: center;
+  }
+  .popular-item {
+    .width(12000px, 12, 4, 20px);
+    .width(800px, 12, 12, 20px);
+    margin-bottom: 60px;
+    display: none;
+    &:nth-child(5),
+    &:nth-child(4),
+    &:nth-child(3) {
+      display: block;
+    }
+    img {}
+    &__cost {
+      color: #59b34f;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 40.51px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    &__title {
+      margin-bottom: 10px;
+      a {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 22px;
+        text-decoration: none;
+        color: #000000;
+      }
+    }
+    &__request {
+      color: #1f97f3;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 40.51px;
+      cursor: pointer;
+    }
+  }
+}

@@ -63,9 +63,30 @@
 .products-list {}
 .product-item {
   display: flex;
-  margin-bottom: 139px;
+  padding-bottom: 67px;
+  margin-top: 70px;
+  border-bottom: 1px solid #ededed;
+  @media screen and (max-width: 1100px) {
+    flex-direction: column;
+  }
+  @media screen and (max-width: 500px) {
+    padding-bottom: 50px;
+    margin-top: 50px;
+  }
+  @media screen and (max-width: 400px) {
+   padding-bottom: 30px;
+   margin-top: 30px;
+  }
   h2.item-h2 {
     display: none;
+    color: #212121;
+    font-size: 17px;
+    font-weight: 700;
+line-height: 35px;
+    @media screen and (max-width: 1100px) {
+      display: block;
+      text-align: center;
+    }
   }
   &__gallery {
     width: 505px;
@@ -73,6 +94,14 @@
     flex-shrink: 0;
     margin-bottom: 50px;
     margin-right: 56px;
+    @media screen and (max-width: 1100px) {
+     .margin(auto);
+     margin-bottom: 79px;
+    }
+    @media screen and (max-width: 525px) {
+     width: 100%;
+     height: 302px;
+    }
   }
   &__info {
     h2.item-h2 {
@@ -84,6 +113,9 @@
       line-height: 35px;
       margin-bottom: 33px;
       margin-top: 0;
+      @media screen and (max-width: 1100px) {
+        display: none;
+      }
     }
   }
   &__desc {
@@ -94,9 +126,13 @@
     margin-bottom: 37px;
   }
   &__pieses {
-    display: flex;
+    .flex();
     > div {
-      width: 33%;
+      .width(12000px, 12, 4, 0px);
+      .width(400px, 12, 12, 0px);
+      @media screen and (max-width: 400px) {
+        display: flex;
+      }
       .pieses-title {
         color: #212121;
         font-size: 15px;
@@ -104,6 +140,9 @@
         line-height: 20px;
         max-width: 100px;
         margin-bottom: 23px;
+        @media screen and (max-width: 400px) {
+          margin-right: 20px;
+        }
       }
       .pieses-shet {
         color: #1f97f3;
@@ -114,16 +153,23 @@
         font-weight: 700;
         display: flex;
         align-items: flex-start;
+        white-space: nowrap;
+        .font-size(500px, 24px);
         span {
           font-size: 20px;
           line-height: 10px;
           .margin(5px);
+          .font-size(500px, 16px);
+          line-height: 15px;
         }
       }
     }
   }
   .btn {
     margin-top: 52px;
+    @media screen and (max-width: 500px) {
+      margin-top: 41px;
+    }
     a {
       text-decoration: none;
       color: inherit;
@@ -135,6 +181,62 @@
     }
   }
 }
+
+.pagination {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  @media screen and (max-width: 500px) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .nav-links {
+    .page-numbers {
+      padding: 10px 20px;
+      .font-size(12000px, 20px);
+      .font-size(500px, 15px);
+      font-weight: 700;
+      line-height: 25px;
+      font-family: "Montserrat - Bold";
+      border: 2px solid #eff4f8;
+      background-color: #ffffff;
+      .margin(5px);
+      @media screen and (max-width: 500px) {
+        .margin(4px);
+        padding: 5px 10px;
+      }
+      @media screen and (max-width: 400px) {
+        .margin(2px);
+        padding: 2px 5px;
+      }
+    }
+    .prev, .next {
+      color: #212121;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 25px;
+    }
+    .current {
+      background-color: #1f97f3;
+      color: white;
+    }
+  }
+}
+
+.archive-desc {
+  color: #212121;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 83px;
+  @media screen and (max-width: 500px ) {
+    display: none;
+  }
+}
+
 
 // Общие свойства галлереи
 .galery-block {
@@ -196,6 +298,10 @@
         background-size: cover;
         outline: none;
         cursor: pointer;
+        @media screen and (max-width: 500px) {
+          width: 118px;
+          height: 72px;
+        }
         &.f-video {
           &::before {
             content: '';

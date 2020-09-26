@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', e => {
     $('.f-slides').slick({
       infinite: true,
       slidesToShow: 3,
-      prevArrow: '<div class="slider-arrow f-prev"><img src="./img/slider-arrow.png" alt="arrow"></div>',
-      nextArrow: '<div class="slider-arrow f-next"><img src="./img/slider-arrow.png" alt="arrow"></div>'
+      prevArrow: '<div class="slider-arrow f-prev"><img src="' + location.origin + '/wp-content/themes/cntech/img/slider-arrow.png" alt="arrow"></div>',
+      nextArrow: '<div class="slider-arrow f-next"><img src="' + location.origin + '/wp-content/themes/cntech/img/slider-arrow.png" alt="arrow"></div>'
     });
   });
 
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', e => {
   (function(){
     function changeBg(tag){
       const block = document.querySelector(tag);
-      const url = window.innerWidth > 500 ? block.dataset.src : block.dataset.srcMobile;
+      const url = window.innerWidth > 500 ? block.dataset.src : block.dataset.srcMobile ? block.dataset.srcMobile : block.dataset.src;
       block.setAttribute('style', `background-image: url(${url})`)
     }
 
@@ -122,6 +122,7 @@ document.addEventListener('DOMContentLoaded', e => {
     slide.forEach(item => {
       item.addEventListener('click', e => {
         const mainImgBlock = item.closest('.galery-block').querySelector('.galery-block__main');
+        console.log(mainImgBlock);
         const mainImg = mainImgBlock.querySelector('img');
         mainImg.setAttribute('src', item.dataset.src);
         if(item.classList.contains('f-video')) {
@@ -133,5 +134,33 @@ document.addEventListener('DOMContentLoaded', e => {
     });
   })();
 
+  // Change position Card title on mobile
+  (function(){
+    if(document.querySelectorAll('.mobile-title').length) {
+      const mobileTitle = document.querySelector('.mobile-title');
+      const desctopTitle = document.querySelector('.desctop-title');
+
+      if(window.innerWidth < 1100) mobileTitle.appendChild(desctopTitle);
+    }
+  })();
+
+  // Open tabs
+  (function(){
+    const tabNames = [...document.querySelectorAll('.tab-name')];
+
+    tabNames.forEach(tabName => {
+      tabName.addEventListener('click', e => tabName.closest('.tab-parent').classList.toggle('tab-opened'));
+    });
+  })();
+
+  // Change text
+  (function(){
+    const allItems = [...document.querySelectorAll('.pieses-shet')];
+    allItems.forEach(block => {
+      const array = block.textContent.trim().split(' ');
+      const newArray = array.map(el => isNaN(parseInt(el, 10)) ? `<span>${el}</span>` : el);
+      block.innerHTML = newArray.join(' ');
+    });
+  })();
 
 });
