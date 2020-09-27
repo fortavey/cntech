@@ -51,6 +51,9 @@
       margin-top: 40px;
       .flex();
       justify-content: space-between;
+      .ajax-loader {
+        position: absolute;
+      }
       input:not([type=submit]):not([type=file]):not([type=checkbox]) {
         width: 100%;
         box-sizing: border-box;
@@ -95,8 +98,9 @@
         width: 100%;
         textarea {
           box-sizing: border-box;
-          padding: 18px 5px 5px 25px;
+          padding: 15px 5px 5px 25px;
           font-size: 15px;
+          height: 50px;
           @media screen and (max-width: 500px) {
             padding-top: 21px;
             height: 169px;

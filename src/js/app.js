@@ -119,10 +119,22 @@ document.addEventListener('DOMContentLoaded', e => {
   // Slider on gallery
   (function(){
     const slide = [...document.querySelectorAll('.f-slide')];
+    const mainImgBlockRem = [...document.querySelectorAll('.galery-block__main')];
+    function clickBlock(e){
+      document.querySelector('#img-popup img').setAttribute('src', e.target.getAttribute('src'));
+      jQuery.magnificPopup.open({
+        items: {
+          src: '#img-popup'
+        },
+        type: 'inline'
+      }, 0);
+    }
+    mainImgBlockRem.forEach(el => el.addEventListener('click', clickBlock, false));
     slide.forEach(item => {
       item.addEventListener('click', e => {
         const mainImgBlock = item.closest('.galery-block').querySelector('.galery-block__main');
-        console.log(mainImgBlock);
+        mainImgBlock.removeEventListener('click', clickBlock, false);
+        mainImgBlock.dataset.video = item.dataset.video;
         const mainImg = mainImgBlock.querySelector('img');
         mainImg.setAttribute('src', item.dataset.src);
         if(item.classList.contains('f-video')) {
@@ -130,9 +142,39 @@ document.addEventListener('DOMContentLoaded', e => {
         }else {
           mainImgBlock.classList.remove('f-video');
         }
+        mainImgBlock.addEventListener('click', e => {
+          if(mainImgBlock.classList.contains('f-video')) {
+            document.querySelector('#video-popup iframe').setAttribute('src', mainImgBlock.dataset.video);
+            jQuery.magnificPopup.open({
+              items: {
+                src: '#video-popup'
+              },
+              type: 'inline'
+            }, 0);
+          }else {
+              document.querySelector('#img-popup img').setAttribute('src', mainImgBlock.querySelector('img').getAttribute('src'));
+              jQuery.magnificPopup.open({
+                items: {
+                  src: '#img-popup'
+                },
+                type: 'inline'
+              }, 0);
+          }
+        });
       });
     });
   })();
+
+  // Change iframe height
+  chengeIframeHeight();
+  function chengeIframeHeight(){
+    if(window.innerWidth < 1280) {
+      const iframe = document.querySelector('#video-popup iframe');
+      const height = Math.floor(window.innerWidth/1.777777777777777777777777);
+
+      iframe.style.height = height + 'px';
+    }
+  }
 
   // Change position Card title on mobile
   (function(){
@@ -164,3 +206,4 @@ document.addEventListener('DOMContentLoaded', e => {
   })();
 
 });
+

@@ -126,3 +126,24 @@ main.site-main {
         padding-top: 64px;
     }
 }
+#img-popup {
+    display: flex;
+    justify-content: center;
+    .mfp-close {
+        color: #fff;
+    }
+}
+#video-popup {
+    display: flex;
+    justify-content: center;
+    iframe {
+        width: 1280px;
+        height: 720px;
+        @media screen and (max-width: 1280px) {
+            width: 100%;
+        }
+    }
+    .mfp-close {
+        color: #fff;
+    }
+}
