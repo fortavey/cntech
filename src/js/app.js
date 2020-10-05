@@ -85,12 +85,14 @@ document.addEventListener('DOMContentLoaded', e => {
       button.addEventListener('click', e => {
         button.classList.toggle('opened');
         topLine.classList.toggle('opened');
+        document.body.classList.toggle('mobile-menu-opened');
       });
 
       lis.forEach(li => {
         li.addEventListener('click', e => {
           topLine.classList.remove('opened');
           button.classList.remove('opened');
+          document.body.classList.remove('mobile-menu-opened');
         });
       });
     })();
@@ -131,16 +133,37 @@ document.addEventListener('DOMContentLoaded', e => {
 
           const blockID = anchor.getAttribute('href').substring(2);
 
-          document.getElementById(blockID).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+          window.scrollTo({
+            top: getOffsetSum(document.getElementById(blockID)) - 100,
+            behavior: "smooth"
           });
         });
       });
+      if(location.hash){
+        var myHash = location.hash; //получаем значение хеша
+        location.hash = ''; //очищаем хеш
+        setTimeout(function(){
+          window.scrollTo({
+            top: getOffsetSum(document.querySelector(myHash)) - 100,
+            behavior: "smooth"
+          });
+        },500);
+      }
+      function getOffsetSum(elem) {
+        let top = 0;
+        while(elem) {
+            top = top + parseFloat(elem.offsetTop)
+            elem = elem.offsetParent
+        }
+
+        return Math.round(top);
+      }
+
     })();
   }catch(err){
     console.log(err);
   }
+
 
 
   // Add file to form
@@ -154,11 +177,15 @@ document.addEventListener('DOMContentLoaded', e => {
         button.addEventListener('click', e => {
           input.click();
         });
-        input.addEventListener('change', e => {
-          console.log(input.files[0].name);
-          // let res = input.value;
-          // // res = res.split('\\');
+        input.addEventListener('change', function(){
+          const fileList = this.files;
+          console.log(fileList);
+          // console.log(input.files[0].name);
+          // console.log(button.querySelector('input[type=file]').value);
           // fileName.textContent = input.files[0].name;
+          var text = document.createTextNode(fileList[0].name);
+          fileName.appendChild(text);
+          console.log(button.querySelector('input[type=file]').value);
         })
       });
     })();
@@ -234,7 +261,26 @@ document.addEventListener('DOMContentLoaded', e => {
   }
 
 
+  // Before submit
+  try{
+    (function(){
+      const button = document.querySelector('.footer-form input[type=submit]');
+      const checkbox = document.querySelector('.footer-form input[type=checkbox]');
+      button.addEventListener('click', e => {
+        if(checkbox.checked) {
 
+        }else{
+          e.preventDefault();
+          jQuery.magnificPopup.open({
+            items: {
+              src: '#error-popup'
+            },
+            type: 'inline'
+          }, 0);
+        }
+      });
+    })();
+  }catch(e){console.log(e);}
 
   // Change position Card title on mobile
   try{
@@ -288,6 +334,7 @@ document.addEventListener('DOMContentLoaded', e => {
       const fakeSelect = document.createElement('div');
       const selectTitle = document.createElement('div');
       const subSelect = document.createElement('div');
+      const loginField = document.querySelector('.login-field');
 
       fakeSelect.classList.add('fake-select');
       selectTitle.classList.add('select-title');
@@ -304,6 +351,8 @@ document.addEventListener('DOMContentLoaded', e => {
           select.value = div.textContent;
           fakeSelect.classList.remove('open-select');
           selectTitle.textContent = div.textContent;
+          loginField.classList.remove('lf');
+          loginField.setAttribute('placeholder', `Логин в ${div.textContent}`)
         });
       });
 
@@ -348,6 +397,25 @@ document.addEventListener('DOMContentLoaded', e => {
       });
     })();
   }catch(err){console.log(err);}
+
+  //Add star to required fields
+  try{
+    (function(){
+      const allRequired = [...document.querySelectorAll('.wpcf7-validates-as-required')];
+      allRequired.forEach(el => el.parentNode.classList.add('required-span'));
+    })();
+  }catch(e){
+    console.log(e);
+  }
+
+  // Move gallery
+  try{
+    (function(){
+      const container = document.querySelector('.f-gallery');
+      const gallery = document.querySelector('.wp-block-envira-envira-gallery');
+      container.appendChild(gallery);
+    })();
+  }catch(e){console.log(e)}
 
 });
 

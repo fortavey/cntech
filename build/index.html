@@ -572,7 +572,7 @@
     <div id="img-popup" class="white-popup mfp-hide">
 
     </div>
-    <div id="contacts-popup" class="white-popup popup-form">
+    <div id="contacts-popup" class="white-popup popup-form mfp-hide">
         <div class="popup-form__title">Наши контакты</div>
 
         <div class="social-icons">
@@ -616,61 +616,76 @@
         </div>
         <button title="Close (Esc)" type="button" class="mfp-close">×</button>
     </div>
-    <div id="request-popup" class="white-popup popup-form">
+    <div id="request-popup" class="white-popup popup-form mfp-hide">
         <div class="popup-form__title">Заполните форму</div>
-        <div role="form" class="wpcf7" id="wpcf7-f304-o2" lang="ru-RU" dir="ltr">
+
+        <div role="form" class="wpcf7" id="wpcf7-f304-o3" lang="ru-RU" dir="ltr">
             <div class="screen-reader-response" role="alert" aria-live="polite"></div>
-            <form action="/#wpcf7-f304-o2" method="post" class="wpcf7-form init" enctype="multipart/form-data"
+            <form action="/kontakty/#wpcf7-f304-o3" method="post" class="wpcf7-form init" enctype="multipart/form-data"
                 novalidate="novalidate">
                 <div style="display: none;">
                     <input type="hidden" name="_wpcf7" value="304">
                     <input type="hidden" name="_wpcf7_version" value="5.2.2">
                     <input type="hidden" name="_wpcf7_locale" value="ru_RU">
-                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f304-o2">
+                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f304-o3">
                     <input type="hidden" name="_wpcf7_container_post" value="0">
                     <input type="hidden" name="_wpcf7_posted_data_hash" value="">
                 </div>
-                <p><span class="wpcf7-form-control-wrap text-748"><input type="text" name="text-748" value="" size="40"
-                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true"
-                            aria-invalid="false" placeholder="Название станка"></span>
+                <p><span class="wpcf7-form-control-wrap machine-name required-span"><input type="text"
+                            name="machine-name" value="" size="40"
+                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required request-name"
+                            aria-required="true" aria-invalid="false"
+                            placeholder="Название станка или назначение"></span>
                     <span class="wpcf7-form-control-wrap text-link"><input type="text" name="text-link" value=""
                             size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"
                             placeholder="Ссылка на аналог станка"></span>
-                    <span class="wpcf7-form-control-wrap email-784"><input type="email" name="email-784" value=""
-                            size="40"
+                    <span class="wpcf7-form-control-wrap email-784 required-span"><input type="email" name="email-784"
+                            value="" size="40"
                             class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
-                            aria-required="true" aria-invalid="false" placeholder="Эл. почта"></span>
-                    <span class="wpcf7-form-control-wrap menu-637">
-                        <select name="menu-637"
-                            class="wpcf7-form-control wpcf7-select" aria-invalid="false">
-                            <option value="">---</option>
-                            <option value="Whatsapp">Whatsapp</option>
-                            <option value="Telegram">Telegram</option>
-                            <option value="Viber">Viber</option>
-                            <option value="WeChat">WeChat</option>
-                            <option value="Skype">Skype</option>
-                        </select></span>
-                    <span class="wpcf7-form-control-wrap tel-537"><input type="tel" name="tel-537" value="" size="40"
-                            class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel" aria-invalid="false"
-                            placeholder="Телефон для связи"></span>
-                    <span class="wpcf7-form-control-wrap textarea-970"><textarea name="textarea-970" cols="40" rows="10"
-                            class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"
-                            placeholder="Дополнительная информация, вопросы, уточнения"></textarea></span></p>
-                <div class="form-bottom-line"><span class="file-block"><span class="file-name"><span
-                                class="wpcf7-form-control-wrap file-646"><input type="file" name="file-646" size="40"
+                            aria-required="true" aria-invalid="false" placeholder="Ваш e-mail"></span>
+                    <span class="wpcf7-form-control-wrap messenger"><select name="messenger"
+                        class="wpcf7-form-control wpcf7-select" aria-invalid="false">
+                        <option value="">---</option>
+                        <option value="Whatsapp">Whatsapp</option>
+                        <option value="Telegram">Telegram</option>
+                        <option value="Viber">Viber</option>
+                        <option value="WeChat">WeChat</option>
+                        <option value="Skype">Skype</option>
+                    </select></span>
+                <span class="wpcf7-form-control-wrap text-423"><input type="text" name="text-423" value="" size="40"
+                        class="wpcf7-form-control wpcf7-text login-field lf" aria-invalid="false"
+                        placeholder="Логин в мессенджере"></span>
+                <span class="wpcf7-form-control-wrap tel-or-ligin"><input type="tel" name="tel-or-ligin" value=""
+                        size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel"
+                        aria-invalid="false" placeholder="Ваш телефон"></span>
+                <span class="wpcf7-form-control-wrap textarea-970 required-span"><textarea name="textarea-970" cols="40"
+                        rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
+                        aria-required="true" aria-invalid="false"
+                        placeholder="Описание станка, дополнительная информация, вопросы, уточнения, ссылки"></textarea></span>
+                </p>
+                <div class="form-bottom-line">
+                    <span class="file-block">
+                        <span class="file-name">
+                            <span class="wpcf7-form-control-wrap file-646"><input type="file" name="file-646" size="40"
                                     class="wpcf7-form-control wpcf7-file"
                                     accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv"
-                                    aria-invalid="false"></span></span>Прикрепить файл</span><span
-                        class="wpcf7-form-control-wrap acceptance-707"><span
-                            class="wpcf7-form-control wpcf7-acceptance optional"><span
-                                class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-707" value="1"
-                                        aria-invalid="false"><span class="wpcf7-list-item-label">Даю согласие на
-                                        обработку персональных данных</span></label></span></span></span></div>
-                <p><input type="submit" value="Отправить" class="btn wpcf7-form-control wpcf7-submit"><span
+                                    aria-invalid="false"></span>
+                        </span>
+                        Прикрепить файл
+                    </span>
+                    <span class="wpcf7-form-control-wrap acceptance-707"><span
+                            class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input
+                                        type="checkbox" name="acceptance-707" value="1" aria-invalid="false"><span
+                                        class="wpcf7-list-item-label">Даю согласие на обработку <a href="#">персональных
+                                            данных</a></span></label></span></span></span>
+                </div>
+                <p><input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit btn" disabled=""><span
                         class="ajax-loader"></span></p>
                 <div class="wpcf7-response-output" role="alert" aria-hidden="true"></div>
             </form>
-        </div> <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+        </div>
+
+        <button title="Close (Esc)" type="button" class="mfp-close">×</button>
     </div>
     <script type='text/javascript' src='js/app.js'></script>
 </body>

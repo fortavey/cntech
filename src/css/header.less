@@ -1,3 +1,6 @@
+body.mobile-menu-opened {
+  overflow: hidden;
+}
 header.site-header {
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,6 +47,9 @@ header.site-header {
         background-color: #142f4e;
         z-index: 2;
         padding-bottom: 400px;
+        bottom: 0;
+        right: 0;
+        overflow-y: scroll;
         .wrapper {
           flex-direction: column;
           height: calc(100% - 123px);
@@ -54,6 +60,9 @@ header.site-header {
       display: flex;
       align-items: center;
       border-bottom: 1px solid rgba(255,255,255,0.2);
+      @media screen and (max-width: 900px) {
+        border: none;
+      }
       nav {
         flex-grow: 1;
       }
@@ -89,7 +98,6 @@ header.site-header {
           }
           &:hover a {
             color: #40b1ea;
-            font-family: "Montserrat - Bold";
             font-weight: 700;
             text-decoration: underline;
           }
@@ -101,13 +109,17 @@ header.site-header {
         height: 100%;
         flex-shrink: 0;
         @media screen and (max-width: 900px) {
-          display: none;
+          order: -1;
+          margin-top: 30px;
         }
         > img {
           cursor: pointer;
           display: none;
           &.button-active {
             display: block;
+            @media screen and (max-width: 900px) {
+             display: none;
+            }
           }
         }
         form {
@@ -124,8 +136,14 @@ header.site-header {
           background-color: #fff;
           box-sizing: border-box;
           transition: max-width 0.5s;
+          @media screen and (max-width: 900px) {
+            position: relative;
+            max-width: 100%;
+            right: 0;
+            padding-left: 15px;
+          }
           input {
-            width: 880px;
+            width: 890px;
             border: none;
             outline: none;
             @media screen and (max-width: 1250px) {
@@ -134,14 +152,23 @@ header.site-header {
             @media screen and (max-width: 1050px) {
               width: 480px;
             }
+            @media screen and (max-width: 500px) {
+              width: 100%;
+            }
           }
           .btn {
             width: 184px;
             padding: 0;
+            @media screen and (max-width: 900px) {
+              width: 144px;
+              padding: 0;
+              min-width: 50px;
+              margin-right: 5px;
+            }
           }
           &.search-active {
             padding: 0  4px 0 20px;
-            max-width: 900px;
+            max-width: 910px;
             @media screen and (max-width: 1250px) {
               max-width: 700px;
             }

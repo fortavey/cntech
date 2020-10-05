@@ -55,11 +55,14 @@ main.site-main {
         font-size: 20px;
         font-weight: 700;
         line-height: 25px;
-        margin: 30px 0 50px;
+        margin: 30px 0 20px;
         @media screen and (max-width: 500px) {
             font-size: 18px;
             margin: 30px 0 20px;
         }
+    }
+    a {
+        color: #1f97f3;
     }
     p {
         margin: 12px 0;
@@ -125,6 +128,10 @@ main.site-main {
     @media screen and (max-width: 500px) {
         padding-top: 64px;
     }
+}
+.archive-page {
+    padding-top: 0;
+
 }
 #img-popup {
     display: flex;
@@ -202,20 +209,22 @@ main.site-main {
             margin-right: 20px;
             cursor: pointer;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             white-space: nowrap;
             position: relative;
             margin-bottom: 15px;
+            flex-direction: column;
+            padding-left: 30px;
             @media screen and (max-width:1100px) {
             margin-bottom: 18px;
             }
             .file-name {
-                position: absolute;
                 left: calc(100% + 20px);
                 top: 0;
                 opacity: 0.5;
                 white-space: normal;
                 z-index: 100;
+                order: 5;
                 @media screen and (max-width:1100px) {
                     left: 30px;
                     top: calc(100% - 5px);
@@ -232,6 +241,8 @@ main.site-main {
             background-image: url(./img/clip.png);
             background-size: contain;
             margin-right: 11px;
+            position: absolute;
+            left: 0;
             }
         }
         label {
@@ -281,6 +292,7 @@ main.site-main {
         cursor: pointer;
         margin-right: 36px;
         text-decoration: none !important;
+        position: relative;
         @media screen and (max-width:1100px) {
           order: 2;
           width: 100%;
@@ -310,7 +322,7 @@ main.site-main {
         display: flex;
         justify-content: space-between;
         margin-bottom: 40px;
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 500px) {
             flex-direction: column;
         }
         img {
@@ -335,6 +347,39 @@ main.site-main {
         box-sizing: border-box;
         margin-top: 0;
         margin-bottom: 12px;
+        &.login-field.lf {
+            display: none;
+        }
+    }
+    .required-span {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        .wpcf7-not-valid-tip {
+            color: orange;
+            display: block;
+            font-weight: bold;
+            margin-top: -14px;
+        }
+        &.textarea-970 {
+            .wpcf7-not-valid-tip {
+                margin-top: 0;
+            }
+        }
+        &::after {
+            content: '*';
+            position: absolute;
+            display: block;
+            top: 10px;
+            right: 18px;
+            width: 7px;
+            height: 7px;
+            color: #c62828;
+            font-family: Montserrat;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 25px;
+        }
     }
     textarea {
         box-sizing: border-box;
@@ -407,4 +452,7 @@ main.site-main {
 }
 .search-container {
     margin-bottom: 50px;
+}
+.form-bottom-line a {
+    color: inherit;
 }

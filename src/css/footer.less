@@ -51,8 +51,12 @@
       margin-top: 40px;
       .flex();
       justify-content: space-between;
+      a {
+        color: white;
+      }
       .ajax-loader {
         position: absolute;
+        opacity: 0;
       }
       input:not([type=submit]):not([type=file]):not([type=checkbox]) {
         width: 100%;
@@ -64,6 +68,36 @@
         box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.15);
         border: 1px solid #cad6df;
         background-color: #fafafa;
+      }
+      .required-span {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        .wpcf7-not-valid-tip {
+            color: orange;
+            display: block;
+            font-weight: bold;
+            margin-top: -14px;
+        }
+        &.textarea-970 {
+            .wpcf7-not-valid-tip {
+                margin-top: 0;
+            }
+        }
+        &::after {
+            content: '*';
+            position: absolute;
+            display: block;
+            top: 10px;
+            right: 18px;
+            width: 7px;
+            height: 7px;
+            color: #c62828;
+            font-family: Montserrat;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 25px;
+        }
       }
       input[type=submit] {
         border: none;
@@ -79,7 +113,6 @@
         color: #ffffff;
         font-size: 15px;
         font-weight: 700;
-        cursor: pointer;
         margin-right: 36px;
         text-decoration: none !important;
         @media screen and (max-width:1100px) {
@@ -138,7 +171,7 @@
             position: absolute;
             top: 100%;
             opacity: 0.5;
-            white-space: normal;
+            white-space: nowrap;
             z-index: 100;
             @media screen and (max-width:1100px) {
               left: 30px;
@@ -194,15 +227,15 @@ footer.site-footer {
     font-size: 13px;
     font-weight: 400;
     line-height: 25px;
+    > div div:hover a,
+    li:hover a {
+        color: #40b1ea;
+        font-weight: 700;
+        text-decoration: underline;
+    }
     a {
       text-decoration: none;
       transition: all 0.2s;
-      &:hover {
-        color: #40b1ea;
-        font-family: "Montserrat - Bold";
-        font-weight: 700;
-        text-decoration: underline;
-      }
     }
     .footer-desc {
       margin: 35px 0;
@@ -212,9 +245,6 @@ footer.site-footer {
       font-weight: 700;
       line-height: 25px;
       margin-bottom: 32px;
-    }
-    &-contacts {
-
     }
     &-keyses {
       line-height: 20px;
@@ -272,4 +302,9 @@ footer.site-footer {
       }
     }
   }
+}
+div#error-popup {
+  background-color: white;
+  height: auto;
+  min-height: auto;
 }
