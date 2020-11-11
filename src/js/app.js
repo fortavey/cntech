@@ -110,10 +110,20 @@ document.addEventListener('DOMContentLoaded', e => {
         block.setAttribute('style', `background-image: url(${url})`)
       }
 
-      changeBg('header.site-header');
+
       if(document.querySelectorAll('.main-page').length){
-        changeBg('.main-tech');
+        document.addEventListener('scroll', e => {
+          if(window.scrollY > 400) changeBg('.main-tech');
+        });
       }
+      // document.addEventListener('DOMContentLoaded', e => {
+        window.addEventListener('scroll', e => {
+          if(window.scrollY > 9) changeBg('header.site-header');;
+        });
+        setTimeout(function(){
+          window.scrollTo(0, 10);
+        }, 2500)
+      // });
 
     })();
   }catch(err){
@@ -414,6 +424,35 @@ document.addEventListener('DOMContentLoaded', e => {
       const container = document.querySelector('.f-gallery');
       const gallery = document.querySelector('.wp-block-envira-envira-gallery');
       container.appendChild(gallery);
+    })();
+  }catch(e){console.log(e)}
+
+
+  // Lazy load
+  try{
+    (function(){
+      function lazyBg(tag){
+        [...document.querySelectorAll(tag)].forEach(el => {
+          el.setAttribute('style', `background-image: url(${el.dataset.src});`);
+        });
+      }
+      function lazyImg(tag){
+        [...document.querySelectorAll(tag)].forEach(el => {
+          el.setAttribute('src', el.dataset.src);
+        });
+      }
+      document.addEventListener('scroll', e => {
+        console.log(window.scrollY);
+        if(window.scrollY > 200) {
+          lazyBg('.main-categry-item');
+          lazyImg('.main-control__img img');
+          lazyImg('img.main-delivery__img');
+          lazyImg('.banner-left img');
+          lazyImg('.banner-right img');
+          lazyImg('.main-parts-left img');
+          lazyImg('.main-parts-right img');
+        }
+      });
     })();
   }catch(e){console.log(e)}
 
