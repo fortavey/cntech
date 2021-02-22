@@ -120,9 +120,11 @@ document.addEventListener('DOMContentLoaded', e => {
         window.addEventListener('scroll', e => {
           if(window.scrollY > 9) changeBg('header.site-header');;
         });
-        setTimeout(function(){
-          window.scrollTo(0, 10);
-        }, 2500)
+        if(!location.hash) {
+          setTimeout(function(){
+            window.scrollTo(0, 10);
+          }, 2500)
+        }
       // });
 
     })();
@@ -189,13 +191,8 @@ document.addEventListener('DOMContentLoaded', e => {
         });
         input.addEventListener('change', function(){
           const fileList = this.files;
-          console.log(fileList);
-          // console.log(input.files[0].name);
-          // console.log(button.querySelector('input[type=file]').value);
-          // fileName.textContent = input.files[0].name;
           var text = document.createTextNode(fileList[0].name);
           fileName.appendChild(text);
-          console.log(button.querySelector('input[type=file]').value);
         })
       });
     })();
@@ -219,8 +216,10 @@ document.addEventListener('DOMContentLoaded', e => {
         }, 0);
       }
       mainImgBlockRem.forEach(el => el.addEventListener('click', clickBlock, false));
-      slide.forEach(item => {
-        item.addEventListener('click', e => {
+      document.body.addEventListener('click', e => {
+        if( e.target.classList.contains('f-slide') ) {
+          console.log(e.target);
+          const item = e.target;
           const mainImgBlock = item.closest('.galery-block').querySelector('.galery-block__main');
           mainImgBlock.removeEventListener('click', clickBlock, false);
           mainImgBlock.dataset.video = item.dataset.video;
@@ -252,7 +251,7 @@ document.addEventListener('DOMContentLoaded', e => {
                 }, 0);
             }
           });
-        });
+        }
       });
     })();
 
@@ -290,7 +289,7 @@ document.addEventListener('DOMContentLoaded', e => {
         }
       });
     })();
-  }catch(e){console.log(e);}
+  }catch(e){console.log(e)}
 
   // Change position Card title on mobile
   try{
@@ -442,7 +441,6 @@ document.addEventListener('DOMContentLoaded', e => {
         });
       }
       document.addEventListener('scroll', e => {
-        console.log(window.scrollY);
         if(window.scrollY > 200) {
           lazyBg('.main-categry-item');
           lazyImg('.main-control__img img');
