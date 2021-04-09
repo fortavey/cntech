@@ -899,6 +899,17 @@ document.addEventListener('DOMContentLoaded', function (e) {
     console.log(err);
   }
 
+  try {
+    (function () {
+      var loader = document.querySelector('.f-loader');
+      setTimeout(function () {
+        loader.style.display = 'none';
+      }, 1600);
+    })();
+  } catch (err) {
+    console.log(err);
+  }
+
   // Set background image
   try {
     (function () {
@@ -920,7 +931,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
       if (!location.hash) {
         setTimeout(function () {
           window.scrollTo(0, 10);
-        }, 2500);
+        }, 1500);
       }
       // });
     })();
